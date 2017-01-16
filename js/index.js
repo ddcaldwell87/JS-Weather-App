@@ -4,19 +4,20 @@ $(document).ready(function(){
   var lat;
  
 
-  if (navigator.geolocation) {
+  if (navigator.geolocation) 
+  {
     navigator.geolocation.getCurrentPosition(function(position) {
       // Gets browsers location
       
       lon = position.coords.longitude;
       lat = position.coords.latitude;
-      
-    
 
+      
   // API from Open Weather API
   var api = "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=12305dcb1bc441c342264e813a38d17d";
   
-  $.getJSON(api, function(data){
+  $.getJSON(api, function(data)
+  {
     // JSON call from Open Weather API
         
     var weatherType = data.weather[0].description;
@@ -30,11 +31,13 @@ $(document).ready(function(){
     var cTemp = Math.ceil(kTemp - 273);
      var temp = $("#temp");
 
-    document.getElementById("fSwap").onclick = function(temp) {
+    document.getElementById("fSwap").onclick = function(temp)
+    {
       $("#temp").html(fTemp + "&deg;F");
     };
 
-    document.getElementById("cSwap").onclick = function(temp) {
+    document.getElementById("cSwap").onclick = function(temp)
+    {
       $("#temp").html(cTemp + "&deg;C");
     };
     
@@ -45,6 +48,8 @@ $(document).ready(function(){
     console.log(lat);
     console.log(api);
     console.log(temp);
+    $("#city").html(city);
+    $("#weatherType").html(weatherType);
     $("#temp").html(fTemp + "&deg;F");
   });
   });
