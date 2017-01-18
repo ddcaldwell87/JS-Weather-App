@@ -40,6 +40,16 @@ $(document).ready(function(){
     {
       $("#temp").html(cTemp + "&deg;C");
     };
+
+    function weatherTypeCase(str)
+    {
+      str = str.toLowerCase().split(' ');
+      for (var i = 0; i < str.length; i++)
+      {
+        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+      }
+      return str.join(' ');
+    }
     
     console.log(city);
     console.log(weatherType);
@@ -49,7 +59,7 @@ $(document).ready(function(){
     console.log(api);
     console.log(temp);
     $("#city").html(city);
-    $("#weatherType").html(weatherType);
+    $("#weatherType").html(weatherTypeCase(weatherType));
     $("#temp").html(fTemp + "&deg;F");
   });
   });
