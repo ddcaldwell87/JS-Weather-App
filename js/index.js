@@ -2,7 +2,6 @@ $(document).ready(function(){
   
   var lon;
   var lat;
- 
 
   if (navigator.geolocation) 
   {
@@ -18,8 +17,8 @@ $(document).ready(function(){
   
   $.getJSON(api, function(data)
   {
-    // JSON call from Open Weather API
-        
+    // Location based JSON call from Open Weather API
+      
     var weatherType = data.weather[0].description;
     var kTemp = data.main.temp;
     var city = data.name;
@@ -29,7 +28,7 @@ $(document).ready(function(){
     var fTemp = Math.ceil((kTemp) * (9 / 5) - 459.67);
     // Kelvin to celsius conversion
     var cTemp = Math.ceil(kTemp - 273);
-     var temp = $("#temp");
+    var temp = $("#temp");
 
     document.getElementById("fSwap").onclick = function(temp)
     {
@@ -50,7 +49,7 @@ $(document).ready(function(){
       }
       return str.join(' ');
     }
-    
+
     console.log(city);
     console.log(weatherType);
     console.log(fTemp);
