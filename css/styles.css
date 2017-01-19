@@ -11,6 +11,10 @@ body {
     font-size: 2em; }
   #content #temp {
     font-size: 3em; }
+  #content #cityInput {
+    margin-top: 8%; }
+  #content #cityInputButton {
+    margin-top: 8%; }
   #content button {
     padding: 2% 5%;
     border: none;

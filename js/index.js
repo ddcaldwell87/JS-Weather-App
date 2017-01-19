@@ -2,6 +2,7 @@ $(document).ready(function(){
   
   var lon;
   var lat;
+  var userInput;
 
   if (navigator.geolocation) 
   {
@@ -14,6 +15,8 @@ $(document).ready(function(){
       
   // API from Open Weather API
   var api = "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=12305dcb1bc441c342264e813a38d17d";
+
+  var userCity = "http://api.openweathermap.org/data/2.5/weather?q=richmond,in&appid=12305dcb1bc441c342264e813a38d17d"
   
   $.getJSON(api, function(data)
   {
