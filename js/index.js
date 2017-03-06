@@ -30,21 +30,26 @@ $(document).ready(function()
         var icon = data.weather[0].icon;
         //var iconUrl = "http://openweathermap.org/img/w/"+icon+".png";
 
-        // Kelvin to farhrenheit conversion
+        // Kelvin to fahrenheit conversion
         var fTemp = Math.ceil((kTemp) * (9 / 5) - 459.67);
         // Kelvin to celsius conversion
         var cTemp = Math.ceil(kTemp - 273);
         var temp = $("#temp");
 
-        // Changes temp reading to either farhrenheit or celsius
+        // Changes temp reading to either fahrenheit or celsius
         $("#fSwap").click(function(temp)
         {
-          $("#temp").html(fTemp + "&deg;F");
+          $("#temp").fadeToggle(200, function()
+          {
+            $("#temp").html(fTemp + "&deg;F").fadeIn(200);
+          });
         });
-
         $("#cSwap").click(function(temp)
         {
-          $("#temp").html(cTemp + "&deg;C");
+          $("#temp").fadeToggle(200, function()
+          {
+            $("#temp").html(cTemp + "&deg;F").fadeIn(200);
+          });
         });
 
         // Title Cases the var weatherType weather description
@@ -82,7 +87,7 @@ $(document).ready(function()
           break;
 
           case "10d":
-            $("#icon").addClass("wi wi-day-rain");
+            $("#icon").addClass("wi wi-fw wi-day-rain");
           break;
 
           case "11d":
@@ -161,7 +166,7 @@ $(document).ready(function()
   // var cityInput = $("#cityInput");
   // var stateInput = $("#stateInput");
 
-  // Displays user inputed city weather data (not working)
+  // Displays user inputted city weather data (not working)
   // $("#cityInputButton").click(function()
   // {
     
