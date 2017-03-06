@@ -61,65 +61,81 @@ $(document).ready(function()
         // Daytime icons
         switch (icon)
         {
-            case "01d":
+          case "01d":
             $("#icon").addClass("wi wi-day-sunny");
-            break;
-            case "02d":
+          break;
+
+          case "02d":
             $("#icon").addClass("wi wi-day-cloudy");
-            break;
-            case "03d":
+          break;
+
+          case "03d":
             $("#icon").addClass("wi wi-cloud");
-            break;
-            case "04d":
+          break;
+
+          case "04d":
             $("#icon").addClass("wi wi-cloudy");
-            break;
-            case "09d":
+          break;
+
+          case "09d":
             $("#icon").addClass("wi wi-rain");
-            break;
-            case "10d":
+          break;
+
+          case "10d":
             $("#icon").addClass("wi wi-day-rain");
-            break;
-            case "11d":
+          break;
+
+          case "11d":
             $("#icon").addClass("wi wi-thunderstorm");
-            break;
-            case "13d":
+          break;
+
+          case "13d":
             $("#icon").addClass("wi wi-day-snow");
-            break;
-            case "50d":
+          break;
+
+          case "50d":
             $("#icon").addClass("wi wi-day-fog");
-            break;
+          break;
         }
 
         // Nighttime icons
         switch (icon)
         {
-            case "01n":
+          case "01n":
             $("#icon").addClass("wi wi-night-clear");
-            break;
-            case "02n":
+          break;
+
+          case "02n":
             $("#icon").addClass("wi wi-night-alt-cloudy");
-            break;
-            case "03n":
+          break;
+
+          case "03n":
             $("#icon").addClass("wi wi-cloud");
-            break;
-            case "04n":
+          break;
+
+          case "04n":
             $("#icon").addClass("wi wi-cloudy");
-            break;
-            case "09n":
+          break;
+
+          case "09n":
             $("#icon").addClass("wi wi-rain");
-            break;
-            case "10n":
+          break;
+
+          case "10n":
             $("#icon").addClass("wi wi-night-alt-rain");
-            break;
-            case "11n":
+          break;
+
+          case "11n":
             $("#icon").addClass("wi wi-thunderstorm");
-            break;
-            case "13n":
+          break;
+
+          case "13n":
             $("#icon").addClass("wi wi-night-alt-snow");
-            break;
-            case "50n":
+          break;
+
+          case "50n":
             $("#icon").addClass("wi wi-night-fog");
-            break;
+          break;
         }
 
         console.log(city);
