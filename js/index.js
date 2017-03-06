@@ -62,7 +62,6 @@ $(document).ready(function()
         console.log(lon);
         console.log(lat);
         console.log(api);
-        console.log(temp);
         // Displays weather data in browser
         $("#city").html(city);
         $("#weatherType").html(weatherTypeCase(weatherType));
@@ -74,26 +73,26 @@ $(document).ready(function()
 
   
 
-  var userCityInput;
-  var userStateInput;
-  var cityInput = $("#cityInput");
-  var stateInput = $("#stateInput");
+  // var userCityInput;
+  // var userStateInput;
+  // var cityInput = $("#cityInput");
+  // var stateInput = $("#stateInput");
 
   // Displays user inputed city weather data (not working)
-  $("#cityInputButton").click(function()
-  {
+  // $("#cityInputButton").click(function()
+  // {
     
-    userCityInput = cityInput.val();
-    userStateInput = stateInput.val();
+  //   userCityInput = cityInput.val();
+  //   userStateInput = stateInput.val();
 
-    // City API from Open Weather API
-    var userCity = "http://api.openweathermap.org/data/2.5/weather?q="+userCityInput+","+userStateInput+"&appid=12305dcb1bc441c342264e813a38d17d"
+  //   // City API from Open Weather API
+  //   var userCity = "http://api.openweathermap.org/data/2.5/weather?q="+userCityInput+","+userStateInput+"&appid=12305dcb1bc441c342264e813a38d17d"
   
-    $.getJSON(userCity, function(data)
-    {
-      // City based JSON call from Open Weather API
-      weatherData();
-    });
-  });
+  //   $.getJSON(userCity, function(data)
+  //   {
+  //     // City based JSON call from Open Weather API
+  //     weatherData();
+  //   });
+  // });
 
 });
