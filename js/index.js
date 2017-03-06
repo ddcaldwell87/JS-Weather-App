@@ -28,7 +28,7 @@ $(document).ready(function()
         var city = data.name;
         var windSpeed = data.wind.speed;
         var icon = data.weather[0].icon;
-        var iconUrl = "http://openweathermap.org/img/w/"+icon+".png";
+        //var iconUrl = "http://openweathermap.org/img/w/"+icon+".png";
 
         // Kelvin to farhrenheit conversion
         var fTemp = Math.ceil((kTemp) * (9 / 5) - 459.67);
@@ -62,30 +62,31 @@ $(document).ready(function()
         switch (icon)
         {
             case "01d":
+            $("#icon").addClass("wi wi-day-sunny");
             break;
             case "02d":
+            $("#icon").addClass("wi wi-day-cloudy");
             break;
             case "03d":
+            $("#icon").addClass("wi wi-cloud");
             break;
             case "04d":
-            break;
-            case "05d":
-            break;
-            case "06d":
-            break;
-            case "07d":
-            break;
-            case "08d":
+            $("#icon").addClass("wi wi-cloudy");
             break;
             case "09d":
+            $("#icon").addClass("wi wi-rain");
             break;
             case "10d":
+            $("#icon").addClass("wi wi-day-rain");
             break;
             case "11d":
+            $("#icon").addClass("wi wi-thunderstorm");
             break;
             case "13d":
+            $("#icon").addClass("wi wi-day-snow");
             break;
-            case "50d"
+            case "50d":
+            $("#icon").addClass("wi wi-day-fog");
             break;
         }
 
@@ -93,30 +94,31 @@ $(document).ready(function()
         switch (icon)
         {
             case "01n":
+            $("#icon").addClass("wi wi-night-clear");
             break;
             case "02n":
+            $("#icon").addClass("wi wi-night-alt-cloudy");
             break;
             case "03n":
+            $("#icon").addClass("wi wi-cloud");
             break;
             case "04n":
-            break;
-            case "05n":
-            break;
-            case "06n":
-            break;
-            case "07n":
-            break;
-            case "08n":
+            $("#icon").addClass("wi wi-cloudy");
             break;
             case "09n":
+            $("#icon").addClass("wi wi-rain");
             break;
             case "10n":
+            $("#icon").addClass("wi wi-night-alt-rain");
             break;
             case "11n":
+            $("#icon").addClass("wi wi-thunderstorm");
             break;
             case "13n":
+            $("#icon").addClass("wi wi-night-alt-snow");
             break;
-            case "50n"
+            case "50n":
+            $("#icon").addClass("wi wi-night-fog");
             break;
         }
 
@@ -129,7 +131,7 @@ $(document).ready(function()
         // Displays weather data in browser
         $("#city").html(city);
         $("#weatherType").html(weatherTypeCase(weatherType));
-        $("#icon").html("<img src='"+iconUrl+"'>");
+        //$("#icon").html("<img src='"+iconUrl+"'>");
         $("#temp").html(fTemp + "&deg;F");
       }
       weatherData();
