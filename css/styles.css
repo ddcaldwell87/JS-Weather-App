@@ -11,13 +11,15 @@ body {
     font-size: 2em; }
   #content #temp {
     font-size: 3em; }
-  #content .wi {
-    margin-top: 20%;
+  #content #icon {
+    margin-top: 10%;
     margin-bottom: 20%;
     font-size: 4em; }
   #content button {
-    padding: 2% 5%;
+    margin-top: 5%;
+    padding: 5% 10%;
     border: none;
-    border-radius: 10%; }
+    border-radius: 10%;
+    font-size: 1.2em; }
 
 /*# sourceMappingURL=styles.css.map */
